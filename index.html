@@ -8,14 +8,17 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 	<body>
+		<!-- Header -->
 		<header class="main-header">
 			<div class="container">
-				<a href="index.html" class="logo"><img src="assets/logo.svg" alt="J PRODUCTIONS Logo" style="height:32px;vertical-align:middle;margin-right:8px;">J PRODUCTIONS</a>
+				<a href="index.html" class="logo">
+					<img src="assets/logo.svg" alt="J PRODUCTIONS LLC Logo" />
+				</a>
 				<nav class="main-nav">
 					<ul>
 						<li><a href="index.html" class="active">Home</a></li>
@@ -23,24 +26,33 @@
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</nav>
-				<button class="hamburger" id="hamburger-menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
 			</div>
 		</header>
 
+		<!-- Main Content -->
 		<main>
+			<!-- Hero Section -->
 			<section class="hero">
-				<div class="container">
-					<h1>Premium Event Production & Luxury Experiences</h1>
-					<p>
+				<div id="particles-js"></div>
+				<div class="video-background">
+					<video
+						src="https://videos.pexels.com/video-files/7550331/7550331-hd_1920_1080_25fps.mp4"
+						autoplay
+						loop
+						muted
+						playsinline
+					></video>
+				</div>
+				<div class="hero-content container">
+					<h1 class="reveal-hero">
+						Premium Event Production & Luxury Experiences
+					</h1>
+					<p class="reveal-hero" style="--delay: 0.2s">
 						At J PRODUCTIONS LLC, we deliver high-end event production,
 						audiovisual services, and luxury experiences for corporations,
 						artists, and individuals who demand excellence.
 					</p>
-					<div class="cta-buttons">
+					<div class="cta-buttons reveal-hero" style="--delay: 0.4s">
 						<a href="contact.html" class="btn btn-primary">Get a Quote</a>
 						<a
 							href="https://wa.me/19512099158"
@@ -50,9 +62,66 @@
 						>
 					</div>
 				</div>
+				<a href="#philosophy" class="scroll-down">
+					<span>Explore</span>
+					<div class="arrow"></div>
+				</a>
+			</section>
+
+			<!-- Philosophy Section -->
+			<section id="philosophy" class="content-section">
+				<div class="container reveal">
+					<h2>Beyond Events. We Engineer Legacies.</h2>
+					<p>
+						Excellence is our baseline, not our goal. We believe an event is
+						more than a moment in time—it's a strategic asset, a brand
+						statement, and a memory that lasts a lifetime. Our meticulous
+						approach combines creative vision with logistical precision to
+						produce experiences that are not only flawless, but legendary.
+					</p>
+				</div>
+			</section>
+
+			<!-- Featured Services Section -->
+			<section id="featured-services" class="content-section alt-bg">
+				<div class="container">
+					<h2 class="reveal">Core Capabilities</h2>
+					<div class="featured-grid">
+						<div class="featured-card reveal">
+							<div class="card-icon">›</div>
+							<h3>Corporate & Gala Production</h3>
+							<p>
+								Executing high-stakes corporate events and luxurious galas with
+								unparalleled precision and sophistication.
+							</p>
+						</div>
+						<div class="featured-card reveal" style="--delay: 0.2s">
+							<div class="card-icon">›</div>
+							<h3>Exclusive VIP Experiences</h3>
+							<p>
+								Curating and managing bespoke experiences for high-profile
+								individuals, from private concerts to celebrity engagements.
+							</p>
+						</div>
+						<div class="featured-card reveal" style="--delay: 0.4s">
+							<div class="card-icon">›</div>
+							<h3>Audiovisual & Stage Design</h3>
+							<p>
+								Transforming venues with state-of-the-art sound, video, and
+								lighting design that captivates and inspires.
+							</p>
+						</div>
+					</div>
+					<div class="reveal" style="text-align: center; margin-top: 2rem">
+						<a href="services.html" class="btn btn-secondary"
+							>Explore All Services</a
+						>
+					</div>
+				</div>
 			</section>
 		</main>
 
+		<!-- Footer -->
 		<footer class="main-footer">
 			<div class="container">
 				<p>© 2025 J PRODUCTIONS LLC — All Rights Reserved</p>
@@ -68,6 +137,8 @@
 			</div>
 		</footer>
 
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<script src="assets/script.js"></script>
 	</body>
 </html>
