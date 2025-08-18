@@ -595,3 +595,6 @@ a:hover {
 		font-size: 1.7rem;
 	}
 }
+main, .hero, .services-section, .page-header-section {
+	padding-top: 200px;
+}
