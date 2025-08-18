@@ -100,12 +100,12 @@ a:hover {
 	gap: 1.5rem;
 }
 .logo img {
-	height: 180px;
+	height: 220px;
 	width: auto;
 }
 .logo-text {
 	font-family: 'Gotham', 'Montserrat', sans-serif;
-	font-size: 3.5rem;
+	font-size: 5rem;
 	font-weight: 900;
 	color: var(--accent-color);
 	letter-spacing: 3px;
@@ -546,10 +546,10 @@ a:hover {
 }
 @media (max-width: 900px) {
 	.logo img {
-		height: 90px;
+		height: 110px;
 	}
 	.logo-text {
-		font-size: 1.5rem;
+		font-size: 2.2rem;
 	}
 	.services-section h2 {
 		font-size: 2rem;
