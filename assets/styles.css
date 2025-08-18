@@ -133,7 +133,7 @@ a:hover {
 	width: 100%;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (Home Page) --- */
 .hero {
 	position: relative;
 	height: 100vh;
@@ -197,11 +197,16 @@ a:hover {
 	color: var(--text-color);
 }
 
-.cta-buttons {
-	display: flex;
-	justify-content: center;
-	gap: 15px;
-	flex-wrap: wrap;
+/* --- Page Header (for Services/Contact) --- */
+.page-header-section {
+	padding: 160px 0 80px 0;
+	text-align: center;
+	background-color: var(--bg-alt);
+}
+
+.page-header-section p {
+	margin: 1rem auto 0;
+	font-size: 1.2rem;
 }
 
 /* --- Buttons --- */
@@ -309,22 +314,25 @@ a:hover {
 	margin-right: auto;
 }
 
-/* --- Featured Services --- */
-.featured-grid {
+/* --- Featured & Services Grids --- */
+.featured-grid,
+.services-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
 	margin-top: 3rem;
 }
 
-.featured-card {
+.featured-card,
+.service-item {
 	border: 1px solid var(--border-color);
 	padding: 2.5rem;
 	transition: transform 0.3s ease, border-color 0.3s ease,
 		box-shadow 0.3s ease;
 }
 
-.featured-card:hover {
+.featured-card:hover,
+.service-item:hover {
 	transform: translateY(-10px);
 	border-color: var(--accent-color);
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -335,6 +343,77 @@ a:hover {
 	color: var(--accent-color);
 	font-weight: bold;
 	line-height: 1;
+}
+
+.service-item h3 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.service-item span {
+	font-family: var(--font-heading);
+	font-size: 1.2rem;
+	color: var(--accent-color);
+	font-weight: 600;
+	margin-top: auto;
+}
+
+/* --- Contact Page --- */
+.contact-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 3rem;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 12px;
+	background-color: var(--bg-alt);
+	border: 1px solid var(--border-color);
+	border-radius: 5px;
+	color: var(--text-color);
+	font-family: var(--font-body);
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	outline: none;
+	border-color: var(--accent-color);
+}
+
+.contact-info h3 {
+	margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+	margin-bottom: 1.5rem;
+	font-size: 1.1rem;
+}
+
+.qr-code-container {
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--border-color);
+}
+
+.qr-code-container img {
+	background-color: white;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 1rem;
 }
 
 /* --- Footer --- */
@@ -378,4 +457,11 @@ a:hover {
 .reveal.visible {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+	.contact-grid {
+		grid-template-columns: 1fr;
+	}
 }
