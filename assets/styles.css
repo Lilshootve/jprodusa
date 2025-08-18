@@ -355,10 +355,10 @@ a:hover {
 	font-size: 1rem;
 	color: var(--text-color);
 	margin-bottom: 1.5rem;
-	opacity: 0;
-	max-height: 0;
-	transition: opacity 0.4s, max-height 0.4s;
-	pointer-events: none;
+	opacity: 1;
+	max-height: none;
+	transition: none;
+	pointer-events: auto;
 }
 .service-card:hover .service-desc,
 .service-card:focus-within .service-desc {
