@@ -22,7 +22,8 @@ html {
 
 body {
 	font-family: var(--font-body);
-	background-color: var(--bg-color);
+	background: var(--bg-color) url('assets/background.png') no-repeat center center fixed;
+	background-size: cover;
 	color: var(--text-color);
 	line-height: 1.7;
 }
@@ -95,11 +96,11 @@ a:hover {
 	color: #333;
 }
 .logo img {
-	height: 60px;
+	height: 80px;
 	margin-right: 10px;
 }
 .logo-text {
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: var(--accent-color);
@@ -117,7 +118,7 @@ a:hover {
 }
 .main-nav a {
 	text-decoration: none;
-	color: #555;
+	color: var(--text-color);
 	font-size: 1rem;
 	font-weight: 500;
 	padding: 5px 0;
@@ -520,7 +521,7 @@ a:hover {
 	bottom: 32px;
 	right: 32px;
 	z-index: 2000;
-	background: #25D366;
+	background: var(--accent-color);
 	color: #fff;
 	width: 64px;
 	height: 64px;
@@ -535,7 +536,7 @@ a:hover {
 	text-decoration: none;
 }
 .whatsapp-float:hover {
-	background: #1ebe5d;
+	background: #00a3a3;
 	transform: scale(1.08) translateY(-4px);
 	box-shadow: 0 8px 32px rgba(0,0,0,0.28);
 }
@@ -549,7 +550,7 @@ a:hover {
 	}
 }
 main {
-	padding-top: 200px;
+	padding-top: 100px;
 }
 .hero, .services-section, .page-header-section {
 	padding-top: 0;
