@@ -305,6 +305,4 @@
 @media (max-width: 640px){
   .footer-top{ grid-template-columns: 1fr; }
 }
-
-.no-italic { font-style: normal !important; }
   
