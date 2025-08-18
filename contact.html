@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact Us | J PRODUCTIONS LLC</title>
+		<link rel="stylesheet" href="assets/styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="container">
+				<a href="index.html" class="logo"><img src="assets/logo.svg" alt="J PRODUCTIONS Logo" style="height:32px;vertical-align:middle;margin-right:8px;">J PRODUCTIONS</a>
+				<nav class="main-nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="contact.html" class="active">Contact</a></li>
+					</ul>
+				</nav>
+				<button class="hamburger" id="hamburger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="page-content">
+				<div class="container">
+					<div class="page-header">
+						<h2>Let’s Create Something Extraordinary</h2>
+					</div>
+
+					<div class="contact-grid">
+						<div class="contact-form">
+							<form action="https://formspree.io/f/your-form-id" method="POST">
+								<div class="form-group">
+									<label for="full-name">Full Name</label>
+									<input type="text" id="full-name" name="full-name" required />
+								</div>
+								<div class="form-group">
+									<label for="company">Company / Organization</label>
+									<input type="text" id="company" name="company" />
+								</div>
+								<div class="form-group">
+									<label for="email">Email Address</label>
+									<input type="email" id="email" name="email" required />
+								</div>
+								<div class="form-group">
+									<label for="phone">Phone Number</label>
+									<input type="tel" id="phone" name="phone" />
+								</div>
+								<div class="form-group">
+									<label for="message">Message</label>
+									<textarea
+										id="message"
+										name="message"
+										rows="5"
+										required
+									></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary">
+									Send Message
+								</button>
+							</form>
+						</div>
+
+						<div class="contact-info">
+							<h3>Direct Contact</h3>
+							<p>
+								📍 J PRODUCTIONS LLC<br />
+								6809 INDIANA AVE 130-C20<br />
+								RIVERSIDE, CA 92508
+							</p>
+							<p>📞 <a href="tel:+19512099158">+1 (951) 209-9158</a></p>
+							<p>
+								📧
+								<a href="mailto:info@jprodusa.com">info@jprodusa.com</a>
+							</p>
+
+							<div class="qr-code-container">
+								<img
+									src="assets/qr-placeholder.svg"
+									alt="WhatsApp QR Code"
+								/>
+								<p>Scan the code to connect instantly on WhatsApp.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="main-footer">
+			<div class="container">
+				<p>© 2025 J PRODUCTIONS LLC — All Rights Reserved</p>
+				<p>
+					Follow us:
+					<a
+						href="https://instagram.com/jprodusa_"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Instagram @jprodusa_</a
+					>
+				</p>
+			</div>
+		</footer>
+
+		<script src="assets/script.js"></script>
+	</body>
+</html>
