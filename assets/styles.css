@@ -64,9 +64,19 @@
 	color:var(--accent-color); font-family:var(--font-heading); letter-spacing:2px;
   }
   .main-nav ul{list-style:none;display:flex;gap:25px}
-  .main-nav a{color:#2b2f37;font-size:1rem;font-weight:600;padding:5px 0;transition:color .3s}
-  .main-nav a:hover,
-  .main-nav a.active{color:var(--accent-color);border-bottom:2px solid var(--accent-color)}
+  .main-nav a {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 5px 0;
+	transition: color 0.3s;
+	text-decoration: none;
+}
+.main-nav a:hover,
+.main-nav a.active {
+	color: var(--accent-color);
+	border-bottom: 2px solid var(--accent-color);
+}
   
   /* ========== Hero & Scroll Indicator ========== */
   main{padding-top:100px}
@@ -208,4 +218,15 @@
   @media (max-width:600px){
 	.whatsapp-float{bottom:16px;right:16px;width:52px;height:52px;font-size:1.7rem}
   }
+  .hero > .container,
+.services-section > .container,
+.page-header-section > .container,
+.content-section > .container,
+.main-footer > .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 100%;
+	box-sizing: border-box;
+}
   
