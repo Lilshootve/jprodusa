@@ -95,11 +95,11 @@ a:hover {
 	color: #333;
 }
 .logo img {
-	height: 40px;
+	height: 60px;
 	margin-right: 10px;
 }
 .logo-text {
-	font-size: 48px;
+	font-size: 36px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: var(--accent-color);
