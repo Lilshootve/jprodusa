@@ -108,11 +108,15 @@ document.addEventListener("DOMContentLoaded", function () {
 			hamburger.addEventListener('click', function() {
 				nav.classList.toggle('open');
 				overlay.classList.toggle('open');
+				// Accesibilidad
+				hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
 			});
 			overlay.addEventListener('click', function() {
 				nav.classList.remove('open');
 				overlay.classList.remove('open');
+				hamburger.setAttribute('aria-expanded', 'false');
 			});
 		}
+		// WhatsApp flotante: solo aseguramos que el enlace funcione (no requiere JS extra)
 	});
 })
