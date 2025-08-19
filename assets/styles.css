@@ -172,6 +172,19 @@ main{padding-top:100px}
   transition:transform .3s cubic-bezier(.4,2,.6,1), box-shadow .3s, border-color .3s;
   position:relative; min-height:260px;
 }
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(32,36,44,0.65); /* superposición oscura */
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 12px;
+}
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
 .service-card:hover{transform:translateY(-10px) scale(1.03); box-shadow:0 12px 32px rgba(0,0,0,.18); border-color:var(--accent-color)}
 .service-title{font-family:var(--font-heading);font-size:1.3rem;font-weight:800;color:var(--primary-color);margin-bottom:.5rem}
 .service-price{font-family:var(--font-heading);font-size:1.1rem;color:var(--accent-color);font-weight:700;margin-bottom:1.2rem}
