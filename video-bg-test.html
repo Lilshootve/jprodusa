@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Background Test | J PRODUCTIONS LLC</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.25;
+      pointer-events: none;
+      transition: opacity 0.5s;
+    }
+    .video-bg-selector {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 1001;
+      background: rgba(30,30,30,0.8);
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <select class="video-bg-selector" id="videoSelector">
+    <option value="background.mp4">Video 1 (background.mp4)</option>
+    <option value="background2.mp4">Video 2 (background2.mp4)</option>
+  </select>
+  <video class="bg-video" id="bgVideo" autoplay muted loop playsinline>
+    <source src="assets/background.mp4" type="video/mp4">
+    Tu navegador no soporta video en HTML5.
+  </video>
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="J PRODUCTIONS LLC Home">
+        <img src="assets/logo.svg" alt="J PRODUCTIONS LLC Logo" />
+        <span class="logo-text">J PRODUCTIONS</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-header-section">
+      <div class="container">
+        <h1>Prueba de Video de Fondo</h1>
+        <p>Selecciona un video arriba a la derecha para ver cómo se adapta como fondo.</p>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="container">
+        <h2>Contenido de prueba</h2>
+        <p>Este es un ejemplo de cómo se ve el contenido sobre el video de fondo. Puedes ajustar la opacidad en el CSS para mayor legibilidad.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="J PRODUCTIONS LLC Home">
+            <img src="assets/logo.svg" alt="J Productions logo" width="40" height="40" />
+            <span>J PRODUCTIONS</span>
+          </a>
+          <p class="footer-text">
+            Premium event production & luxury experiences. We deliver corporate-grade reliability
+            with cinematic quality across every project.
+          </p>
+          <div class="footer-social" aria-label="Social links">
+            <a href="https://instagram.com/jprodusa_" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/19512099158" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <h3 class="footer-heading">Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <address class="footer-contact">
+          <h3 class="footer-heading">Contact</h3>
+          <ul>
+            <li><a href="mailto:info@jprodusa.com">info@jprodusa.com</a></li>
+            <li><a href="tel:+19512099158">+1 (951) 209-9158</a></li>
+            <li>
+              J PRODUCTIONS LLC<br/>
+              6809 INDIANA AVE 130-C20<br/>
+              RIVERSIDE, CA 92508
+            </li>
+          </ul>
+          <a class="btn btn-secondary footer-cta" href="https://wa.me/19512099158" target="_blank" rel="noopener">Get a Quote</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <small>© <span id="year"></span> J PRODUCTIONS LLC — All Rights Reserved.</small>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy-policy.html" rel="nofollow">Privacy Policy</a>
+          <span aria-hidden="true">•</span>
+          <a href="terms-and-conditions.html" rel="nofollow">Terms & Conditions</a>
+        </nav>
+      </div>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+  <script>
+    document.getElementById('videoSelector').addEventListener('change', function(e) {
+      var video = document.getElementById('bgVideo');
+      var src = 'assets/' + e.target.value;
+      video.querySelector('source').setAttribute('src', src);
+      video.load();
+      video.play();
+    });
+  </script>
+</body>
+</html>
