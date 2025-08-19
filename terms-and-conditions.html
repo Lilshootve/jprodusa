@@ -15,11 +15,14 @@
   </video>
   <header class="main-header">
     <div class="container">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" aria-label="J PRODUCTIONS LLC Home">
         <img src="assets/logo.svg" alt="J PRODUCTIONS LLC Logo" />
         <span class="logo-text">J PRODUCTIONS</span>
       </a>
-      <nav class="main-nav">
+      <button class="hamburger" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
@@ -27,6 +30,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <div class="nav-overlay"></div>
     </div>
   </header>
   <main>

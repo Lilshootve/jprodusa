@@ -99,4 +99,20 @@ document.addEventListener("DOMContentLoaded", function () {
 			retina_detect: true,
 		});
 	}
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var hamburger = document.querySelector('.hamburger');
+		var nav = document.querySelector('.main-nav');
+		var overlay = document.querySelector('.nav-overlay');
+		if (hamburger && nav && overlay) {
+			hamburger.addEventListener('click', function() {
+				nav.classList.toggle('open');
+				overlay.classList.toggle('open');
+			});
+			overlay.addEventListener('click', function() {
+				nav.classList.remove('open');
+				overlay.classList.remove('open');
+			});
+		}
+	});
 })
