@@ -426,8 +426,10 @@ main{padding-top:100px}
     justify-content: flex-start;
     padding: 80px 32px 32px 32px;
   }
-  .main-nav.open {
-    transform: translateX(0);
+  .main-header .main-nav.open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   .main-nav ul {
     flex-direction: column;
