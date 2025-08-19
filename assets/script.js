@@ -100,25 +100,25 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
-	document.addEventListener('DOMContentLoaded', function() {
-		// Para cada header en la página
-		document.querySelectorAll('.main-header').forEach(function(header) {
-			var hamburger = header.querySelector('.hamburger');
-			var nav = header.querySelector('.main-nav');
-			var overlay = header.querySelector('.nav-overlay');
-			if (hamburger && nav && overlay) {
-				hamburger.addEventListener('click', function() {
-					nav.classList.toggle('open');
-					overlay.classList.toggle('open');
-					hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
-				});
-				overlay.addEventListener('click', function() {
-					nav.classList.remove('open');
-					overlay.classList.remove('open');
-					hamburger.setAttribute('aria-expanded', 'false');
-				});
-			}
+	(function(){
+		const btn = document.querySelector('.hamburger');
+		const nav = document.getElementById('primary-nav');
+		if(!btn || !nav) return;
+		function setOpen(isOpen){
+			btn.classList.toggle('is-open', isOpen);
+			nav.classList.toggle('is-open', isOpen);
+			btn.setAttribute('aria-expanded', String(isOpen));
+			document.body.classList.toggle('nav-open', isOpen);
+		}
+		btn.addEventListener('click', () => {
+			const open = !nav.classList.contains('is-open');
+			setOpen(open);
 		});
-		// WhatsApp flotante: solo aseguramos que el enlace funcione (no requiere JS extra)
-	});
+		nav.querySelectorAll('a').forEach(a => {
+			a.addEventListener('click', () => setOpen(false));
+		});
+		document.addEventListener('keydown', (e) => {
+			if(e.key === 'Escape') setOpen(false);
+		});
+	})();
 })
