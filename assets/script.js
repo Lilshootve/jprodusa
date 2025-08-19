@@ -101,22 +101,24 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	document.addEventListener('DOMContentLoaded', function() {
-		var hamburger = document.querySelector('.hamburger');
-		var nav = document.querySelector('.main-nav');
-		var overlay = document.querySelector('.nav-overlay');
-		if (hamburger && nav && overlay) {
-			hamburger.addEventListener('click', function() {
-				nav.classList.toggle('open');
-				overlay.classList.toggle('open');
-				// Accesibilidad
-				hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
-			});
-			overlay.addEventListener('click', function() {
-				nav.classList.remove('open');
-				overlay.classList.remove('open');
-				hamburger.setAttribute('aria-expanded', 'false');
-			});
-		}
+		// Para cada header en la página
+		document.querySelectorAll('.main-header').forEach(function(header) {
+			var hamburger = header.querySelector('.hamburger');
+			var nav = header.querySelector('.main-nav');
+			var overlay = header.querySelector('.nav-overlay');
+			if (hamburger && nav && overlay) {
+				hamburger.addEventListener('click', function() {
+					nav.classList.toggle('open');
+					overlay.classList.toggle('open');
+					hamburger.setAttribute('aria-expanded', nav.classList.contains('open'));
+				});
+				overlay.addEventListener('click', function() {
+					nav.classList.remove('open');
+					overlay.classList.remove('open');
+					hamburger.setAttribute('aria-expanded', 'false');
+				});
+			}
+		});
 		// WhatsApp flotante: solo aseguramos que el enlace funcione (no requiere JS extra)
 	});
 })
