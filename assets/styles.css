@@ -192,7 +192,7 @@ main{padding-top:100px}
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 2rem;
-  padding: 48px 32px 72px 32px;
+  padding: 48px 0 72px 0;
 }
 .footer-logo{
   display:flex; align-items:center; gap:12px;
