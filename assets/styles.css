@@ -101,7 +101,7 @@ main{padding-top:100px}
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(32,36,44,0.75); /* color base + transparencia */
+  background: rgba(32,36,44,0.65); /* más transparente */
   z-index: 0;
   pointer-events: none;
 }
@@ -128,7 +128,22 @@ main{padding-top:100px}
 
 /* ========== Sections ========== */
 .content-section{padding:100px 0}
-.content-section.alt-bg{background:var(--bg-alt)}
+.content-section.alt-bg {
+  position: relative;
+  /* background: var(--bg-alt); */
+}
+.content-section.alt-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(32,36,44,0.55); /* superposición más ligera */
+  z-index: 0;
+  pointer-events: none;
+}
+.content-section.alt-bg > .container {
+  position: relative;
+  z-index: 1;
+}
 #philosophy p{font-size:1.2rem;text-align:center;margin-inline:auto}
 
 /* ========== Grids y Cards ========== */
