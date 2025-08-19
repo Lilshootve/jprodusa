@@ -459,3 +459,12 @@ main{padding-top:100px}
     padding: 1.5rem 0 1.5rem 0;
   }
 }
+
+.service-category-header {
+  padding: 2.5rem 0 1.5rem 0;
+}
+@media (max-width: 900px) {
+  .service-category-header {
+    padding: 1.5rem 0 1rem 0;
+  }
+}
